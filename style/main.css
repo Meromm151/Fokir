@@ -3,6 +3,7 @@
     text-decoration: none;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
@@ -587,6 +588,22 @@ footer span{
     }
     #nav-bar .nav-menu button{
         display: block;
+        position: relative;
+    }
+    #nav-bar .nav-menu button:hover + ul{
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        top: 58px;
+        width: 90%;
+        text-align: center;
+        margin: auto;
+        background-color: #333333;
+    }
+    #nav-bar .nav-menu button:hover + ul li{
+        display: block;
+        padding-block: 8px;
+        
     }
     #nav-bar .nav-menu ul li{
         display: none;
@@ -664,11 +681,12 @@ footer span{
         width: 30%;
         left: 50%;
         transform: translateX(-50%);
-        padding-bottom: 20px;
+        padding-block: 30px;
     }
     #testimonial .client .client-info{
         width: 100%;
         float: none;
+        padding-block: 20px;
     }
     #blog .blog-boxs .box{
         width: 100%;
