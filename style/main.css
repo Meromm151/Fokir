@@ -11,6 +11,7 @@ a{
     color: black;
 }
 .container{
+    width: 1320px;
     margin: auto;
 }
 .clear-fix{
@@ -18,6 +19,8 @@ a{
 }
 .section{
     padding: 80px 0px;
+    text-align: center;
+    color: #333333;
 }
 h2{
     font-size: 40px;
@@ -62,21 +65,18 @@ h2::before{
     font-size: 22px;
     margin: 0;
     color: #FF305B;
-}#nav-bar .nav-logo h2::after ,
+}
+#nav-bar .nav-logo h2::after ,
 #nav-bar .nav-logo h2::before{
     display: none;
 }
 #nav-bar .nav-menu{
     float: right;
-    font-weight: 300;
     line-height: 27px;
-}
-#nav-bar .nav-menu ul{
-    display: block;
 }
 #nav-bar .nav-menu li{
     display: inline-block;
-    padding: 0px 10px;
+    padding-inline:  10px;
 }
 #nav-bar .nav-menu .active{
     color: #FF305B;
@@ -97,12 +97,15 @@ h2::before{
     padding: 2px 5px;
     display: none;
 }
+
+/* home */
+
 #home {
     width: 100%;
+    height: 100vh;
     display: table;
     text-align: center;
     color: white;
-    height: 100vh;
     background-image: url("../images/hero.jpg");
     background-size: cover;
     background-position: center center;
@@ -112,16 +115,16 @@ h2::before{
     vertical-align: middle;
     background-color: rgba(0, 0, 0, 0.788);
 }
-#home span.hello{
+#home .hello{
     font-size: 22px;
-    font-weight: bold;
+    font-weight: 800;
 }
 #home h1{
     margin-block: 20px;
     color: #FF305B;
     font-size: 65px;
 }
-#home p{
+#home .paragraph{
     justify-content: center;
     font-size: 22px;
     display: flex;
@@ -204,25 +207,29 @@ h2::before{
     }
 }
 /* about */
+#about{
+    text-align: left;
+}
 #about .about-image-sec{
-    padding-left: 80px;
+    width: 35%;
     float: left;
+}
+#about .inner-container{
+    width: 100%;
+    padding-left: 80px;
 }
 #about .about-image{    
     border: 8px solid #555555;
     border-radius: 6px;
-    position: relative;
 }
 #about .about-image .admin-image{
     border-radius: 8px;
+    transform: translate(20px , 20px);
     overflow: hidden;
     position: relative;
-    top: 20px;
-    left: 20px;
 }
 #about .about-image .admin-image img{
     width: 100% ;
-    position: relative;
 }
 #about .about-image .icons{
     position: absolute;
@@ -257,8 +264,8 @@ h2::before{
 }
 
 #about .about-info{
+    width: 65%;
     float: left;
-    width: 680px;
     padding-left: 80px;
 }
 #about .about-info .top-sec h2{
@@ -280,28 +287,31 @@ h2::before{
 }
 #about .about-info .bottom-sec{
     padding-top: 25px;
-    
 }
-#about .about-info .bottom-sec .item{
-    width: 50%;
+#about .about-info .bottom-sec ul{
+    width: auto;
+    padding-right: 80px;
     float: left;
-    padding-bottom: 15px;
 }
-#about .about-info .bottom-sec .item span{
+#about .about-info .bottom-sec ul li{
+    width: 100%;
+    padding-bottom: 25px;
+}
+#about .about-info .bottom-sec span{
     color: #555555;
 }
-#about .about-info .bottom-sec .item .lable{
+#about .about-info .bottom-sec .lable{
     font-weight: 500;
     color: black;
 }
 #about .about-info .about-btns button{
     padding: 15px 30px;
+    margin-top: 15px;
     background-color: #FF305B;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
     font-size: 16px;
-    margin-top: 15px;
     transition: .4s background-color;
 }
 #about .about-info .about-btns button:hover{
@@ -312,14 +322,11 @@ h2::before{
 }
 /* service */
 #services {
-    text-align: center;
-    color: #333333;
     background-color: #F1F1F1;
 }
 #services .services-info .service{
     width: 25%;
     padding: 30px 15px;
-    background-color: transparent;
     float: left;
     transition: 0.5s background-color ;
 }
@@ -338,18 +345,12 @@ h2::before{
     line-height: 25px;
     color: #555555;
 }
-#portfolio{
-    text-align: center;
-    color: #333333;
-}
+/* protfolio */
 #portfolio .menu{
     margin-bottom: 30px;
-    text-align: center;
 }
-
 #portfolio .menu span{
     display: inline-block;
-    
 }
 #portfolio .menu a{
     padding:10px;
@@ -377,7 +378,6 @@ h2::before{
     color: #FF305B;
     text-align: center;
     opacity: 0;
-    z-index: 0;
     transition: 0.4s opacity;
 }
 #portfolio .products .product-box .overlay i{
@@ -386,9 +386,8 @@ h2::before{
     text-align: right;
     padding: 15px;
 }
+/* count up */
 #countup{
-    text-align: center;
-    color: #333333;
     background-color: #F1F1F1;
 }
 #countup .box{
@@ -409,46 +408,27 @@ h2::before{
     font-size: 22px;
     font-weight: 800;
 }
-
-#testimonial {
-    text-align: center;
-    color: #333333;
-}
+/* testimonials */
 #testimonial .client{
-    width: 70%;
-    background-color: #F1F1F1;
+    width: 60%;
+    background-image: linear-gradient(135deg, #FF305B 15%, #F1F1F1 15%, #F1F1F1 100%);
+    padding: 40px;
     margin: auto;
     text-align: left;
-    border-radius: 10px;
+    border-radius: 5px;
     position: relative;
     overflow: hidden;
 }
-#testimonial .client::after{
-    content: "";
-    position: absolute;
-    width: 350px;
-    height: 200px;
-    top: -80px;
-    left: -150px;
-    z-index: 0;
-    background-color: #FF305B;
-    transform: rotate(135deg);
-    
-}
 #testimonial .client img{
-    width: 20%;
-    padding-block: 20px;
+    width: 15%;
     border-radius: 50%;
     float: left;
-    position: relative;
-    z-index: 1;
 }
-
 #testimonial .client .client-info{
     float: left;
     position: relative;
     z-index: 5;
-    width: 80%;
+    width: 85%;
     line-height: 25px;
     padding-left: 20px;
 }
@@ -467,10 +447,7 @@ h2::before{
 }
 #testimonial .client .client-info .rate{
     padding-top: 10px;
-}
-#testimonial .client .client-info .rate i{
     color: #F1C30D;
-    
 }
 #testimonial .designed-dots{
     margin-top: 10px;
@@ -489,23 +466,24 @@ h2::before{
     border-radius: 50%;
     display: inline-block;
 }
+/* blog */
 #blog{
-    text-align: center;
     background-color: #F1F1F1;
 }
 #blog .blog-boxs .box{
     width: 33.33%;
+    padding-inline: 12px;
     float: left;
-    padding-inline: 15px;
     text-align: left;
     color: #333333;
-    
 }
 #blog .blog-boxs .box img{
     width: 100%;
 }
 #blog .blog-boxs .box iframe{
+    
     width: 100%;
+    height: 230.25px;
 }
 #blog .blog-boxs .box .box-info{
     background-color: white;
@@ -524,11 +502,12 @@ h2::before{
 #blog .blog-boxs .box .box-info a:hover{
     color: #FF305B;
 }
-#contact h2{
-    text-align: center;
-}
+/* contact */
 #contact .container{
     width: 40%;
+}
+#contact form{
+    text-align: left;
 }
 #contact input , #contact textarea{
     width: 100%;
@@ -552,18 +531,19 @@ h2::before{
     resize: vertical;
 }
 #contact button{
-    padding: 15px 30px;
+    padding: 15px 20px;
     background-color: #FF305B;
     color: white;
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: 4px;
+    font-size: 14px;
     margin-top: 15px;
     transition: .4s background-color;
 }
 #contact button:hover{
     background-color: #ec2403;
 }
+/* footer */
 footer{
     padding-block: 60px;
     background-color: #333333;
@@ -578,10 +558,34 @@ footer span{
 }
 
 
-@media (max-width:576px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* xsm done */
+@media screen and (max-width:576px) {
     .container{
         width: 100%;
-        padding: 0 10px;
+        padding: 0 15px;
+    }
+    h2{
+        font-size: 32px;
     }
     .section{
         padding: 50px 0;
@@ -634,26 +638,34 @@ footer span{
         }
     }
     #about .about-image-sec{
-        padding-left: 0px;
         float: none;
         padding-bottom: 30px;
     }
+    #about .inner-container{
+        width: 100%;
+        padding: 0;
+    }
+    #about .about-image-sec {
+        width: 100%;
+    }
     #about .about-image-sec .about-image {
         border: 0;
-
     }
-    #about .about-image-sec .about-image .admin-image{
-        top: 0;
-        left: 0;
+    #about .about-image .admin-image {
+        transform: translate(0 , 0);
     }
     #about .about-info{
         float: none;
         width: 100%;
         padding-left: 0px;
     }
-    #about .about-info .bottom-sec .item{
+    #about .about-info .bottom-sec ul{
         float: none;
-        padding-bottom: 25px;
+    }
+    #about .about-info .about-btns button{
+        margin-top: 0;
+        padding: 12px;
+        font-size: 16px;
     }
     #services .services-info .service{
         width: 100%;
@@ -673,24 +685,27 @@ footer span{
     }
     #testimonial .client{
         width: 100%;
-        
+    }
+    #testimonial .client{
+        padding: 20px;
     }
     #testimonial .client img{
         display: block;
+        margin: auto;
         float: none;
-        width: 30%;
+        width: 35%;
         left: 50%;
-        transform: translateX(-50%);
-        padding-block: 30px;
     }
     #testimonial .client .client-info{
         width: 100%;
         float: none;
         padding-block: 20px;
+        padding-left: 0;
     }
     #blog .blog-boxs .box{
         width: 100%;
         padding-bottom: 25px;
+        padding-inline: 0;
     }
     #contact .container{
         width: 100%;
@@ -702,9 +717,10 @@ footer span{
         width: 100%;
     }
 }
-@media (min-width:576px) {
+/* sm done */
+@media screen and (min-width:577px) and (max-width:767px) {
     .container{
-        width: 450px;
+        width: 540px;
         padding: 0 20px;
     }
     .section{
@@ -741,8 +757,11 @@ footer span{
             width: 90px;
         }
     }
+    #about .inner-container{
+        padding: 0;
+    }
     #about .about-image-sec{
-        padding-left: 0px;
+        width: 100%;
         float: none;
         padding-bottom: 30px;
     }
@@ -750,18 +769,15 @@ footer span{
         border: 1px solid #333333;
     }
     #about .about-image-sec .about-image .admin-image{
-        top: 0;
-        left: 0;
+        transform: translate(0px , 0px);
     }
     #about .about-info{
         float: none;
         width: 100%;
         padding-left: 0px;
     }
-    #about .about-info .bottom-sec .item{
-        float: left;
-        padding-bottom: 10px;
-        font-size: 14px;
+    #about .about-info .about-btns .btn1 , #about .about-info .about-btns .btn2{
+        margin-top: 0;
     }
     #services .services-info .service{
         width: 100%;
@@ -774,19 +790,21 @@ footer span{
         margin-bottom: 15px;
     }
     #testimonial .client{
+        background-image: linear-gradient(135deg, #FF305B 20%, #F1F1F1 20%, #F1F1F1 100%);
         width: 100%;
+        padding: 20px;
     }
     #testimonial .client img{
         display: block;
         float: none;
-        width: 30%;
-        left: 50%;
-        transform: translateX(-50%);
-        padding-bottom: 20px;
+        width: 25%;
+        margin: auto;
+        padding-bottom: 25px;
     }
     #testimonial .client .client-info{
         width: 100%;
         float: none;
+        padding: 0;
     }
     #blog .blog-boxs .box{
         width: 100%;
@@ -805,7 +823,9 @@ footer span{
         width: 100%;
     }
 }
-@media (min-width:768px) {
+
+/* md done */
+@media  screen and (min-width:768px) and (max-width:991px) {
     .container{
         width: 720px;
     }
@@ -844,15 +864,35 @@ footer span{
         }
     }
     #about .about-image-sec{
-        padding-left: 0px;
-        width: 40%;
         float: left;
-        padding-bottom: 0px;
+        width: 50%;
+    }
+    #about .inner-container{
+        width: 100%;
+        padding: 0;
+    }
+    #about .about-image-sec .about-image {
+        border: 0;
+    }
+    #about .about-image .admin-image {
+        transform: translate(0 , 0);
     }
     #about .about-info{
         float: left;
-        width: 60%;
+        width: 50%;
         padding-left: 35px;
+    }
+    #about .about-info .bottom-sec ul{
+        float: left;
+        padding: 0;
+        font-size: 14px;
+    }
+    #about .about-info .bottom-sec ul li{
+        padding-bottom: 15px;
+    }
+    #about .about-info .bottom-sec ul.f-list{
+        width: 140px;
+        padding-right: 10px;
     }
     #about .about-info .about-btns button{
         padding: 10px 20px;
@@ -875,25 +915,28 @@ footer span{
     }
     #testimonial .client img{
         float: left;
-        width: 15%;
+        width: 17%;
         left: 0%;
         transform: translateX(0%);
         padding: 0;
     }
     #testimonial .client .client-info{
-        width: 85%;
+        width: 83%;
         float: left;
         padding-left: 20px;
     }
     #blog .blog-boxs .box{
         width: 33.33%;
-        padding-bottom: 0px;
     }
+    #blog .blog-boxs .box .box-info{
+        padding: 12px;
+    }     
     #blog .blog-boxs .box iframe{
-        height: 110.44px;
+        height: 121.3px;
     }
     #contact .container{
         width: 100%;
+        padding: 15px;
     }
     #contact .line{
         width: 48%;
@@ -901,8 +944,13 @@ footer span{
     #contact .line1 {
         width: 48%;
     }
+    #contact button{
+        padding: 10px 17px;
+    }
 }
-@media (min-width:992px) {
+
+/* lg done */
+@media screen and (min-width:992px) and (max-width:1199px) {
     .container{
         width: 960px;
     }
@@ -923,20 +971,11 @@ footer span{
             width: 110px;
         }
     }
-    #about .about-image-sec{
-        padding-left: 80px;
-        width: 35%;
+    #about .inner-container{
+        padding-left: 40px;
     }
-    #about .about-image-sec .about-image {
-        border: 8px solid #333333;
-    }
-    #about .about-image-sec .about-image .admin-image{
-        top: 20px;
-        left: 20px;
-    }
-    #about .about-info{
-        width: 50%;
-        padding-left: 80px;
+    #about .about-info .bottom-sec ul li {
+        padding-bottom: 15px;
     }
     #services .services-info .service{
         width: 25%;
@@ -945,48 +984,43 @@ footer span{
         width: 33.33%;
     }
     #testimonial .client{
+        background-image: linear-gradient(135deg, #FF305B 20%, #F1F1F1 20%, #F1F1F1 100%);
         width: 65%;
     }
     #testimonial .client img{
         width: 20%;
-        padding-block: 20px;
     }
     #testimonial .client .client-info{
         width: 80%;
     }
     #blog .blog-boxs .box iframe{
-        height: 155.36px;
+        height: 162.84px;
     }
     #contact .container{
+        padding: 15px;
         width: 100%;
     }
 }
-@media (min-width:1200px) {
+
+/* xl done */
+@media screen and (min-width:1200px) and (max-width:1399px) {
     .container{
         width: 1140px;
     }
+    #testimonial .client{
+        background-image: linear-gradient(135deg, #FF305B 20%, #F1F1F1 20%, #F1F1F1 100%);
+    }
     #testimonial .client img{
-        width: 15%;
-        padding-block: 00px;
+        width: 20%;
     }
     #testimonial .client .client-info{
-        width: 85%;
+        width: 80%;
     }
     #blog .blog-boxs .box iframe{
-        height: 189.06px;
+        height: 196.55px;
     }
     #contact .container{
         width: 60%;
     }
 }
-@media (min-width:1400px) {
-    .container{
-        width: 1320px;
-    }
-    #blog .blog-boxs .box iframe{
-        height: 222.75px;
-    }
-    #contact .container{
-        width: 40%;
-    }
-}
+
